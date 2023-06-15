@@ -29,6 +29,7 @@ const lookup = {
   Z: "M",
   "?": "?",
   ",": ",",
+	" ":" ",
 };
 
 function rot13(encodedStr) {
@@ -36,10 +37,10 @@ function rot13(encodedStr) {
   // Only change code below this line
 
 	for(let i=0;i<encodedStr.length;i++){
-		decodedArr.push(lookup.encodesStr.charAt(i));
+		decodedArr.push(lookup[encodedStr.charAt(i)]);
 	}
 
-  return; //return decodedArr
+  return decodedArr;
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
